@@ -1,0 +1,81 @@
+<header class="container-fluid">
+    <div class="row">
+        <div class="col-12 vh-100" id="bg-header">
+            <nav class="navbar navbar-expand-lg top-fixed">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" href="/">Candidato</a>
+                    <button
+                        class="navbar-toggler border-white custom-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse justify-content-end"
+                        id="navbarNavAltMarkup"
+                    >
+                        <div class="navbar-nav">
+                            <a
+                                class="nav-link active text-white"
+                                aria-current="page"
+                                href="/">Inicio</a
+                            >
+                            <a class="nav-link text-white" href="/propuestas"
+                                >Propuestas</a
+                            >
+                            <a class="nav-link text-white" href="/contacto"
+                                >Contacto</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<style>
+    .bg-header-xs {
+        background-image: url("public/header-xs.png");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .bg-header-md {
+        background-image: url("public/header-md.png");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .bg-header-xl {
+        background-image: url("public/header-xl.png");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /* Setting the stroke to green using rgb values (0, 128, 0) */
+
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+    .collapse
+</style>
+<script>
+    // Get the width of the window
+    const windowWidth = window.innerWidth;
+
+    // Check if the window width is less than 992 pixels
+    if (windowWidth < 576) {
+        document.getElementById("bg-header").classList.add("bg-header-xs");
+    }
+    if (windowWidth > 576 ) {
+        document.getElementById("bg-header").classList.add("bg-header-md");
+    } 
+    if (windowWidth > 992 ) {
+        document.getElementById("bg-header").classList.add("bg-header-xl");
+    } 
+</script>

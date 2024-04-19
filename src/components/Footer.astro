@@ -1,0 +1,63 @@
+<footer class="vh-50 footer container-fluid">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <img src="public/logo.svg" alt="" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <!-- <h3 id="clock" class="text-white"></h3> -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 d-flex justify-content-center py-5">
+            <a  href="" class="circle border rounded-circle ms-3 d-flex justify-content-center align-items-center">
+                <img src="public/facebook-icon.svg" alt="">
+            </a>
+            <a  href="" class="circle border rounded-circle ms-3 d-flex justify-content-center align-items-center">
+                <img src="public/instagram-icon.svg" alt="">
+            </a>
+            <a  href="" class="circle border rounded-circle ms-3 d-flex justify-content-center align-items-center">
+                <img src="public/tiktok-icon.svg" alt="">
+            </a>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</footer>
+<style>
+    .vh-50 {
+        height: 50vh;
+    }
+    .footer {
+        background: #00255b;
+    }
+    .footer img {
+        height: 130px;
+    }
+    .circle {
+        height: 50px;
+        width: 50px;
+    }
+    .circle img{
+        height: 20px;
+    }
+   
+</style>
+<script>
+    function updateClock() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+        const timeString = `${hours}:${minutes}:${seconds}`;
+
+        document.getElementById("clock").textContent = timeString;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+
+    // Initial call to display the clock immediately
+    updateClock();
+</script>

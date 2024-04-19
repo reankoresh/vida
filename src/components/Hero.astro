@@ -1,0 +1,55 @@
+<!-- Slider main container -->
+<section class="container-fluid swiper">
+	<!-- Additional required wrapper -->
+	<div class="swiper-wrapper vh-50">
+		<!-- Slides -->
+		<div class="swiper-slide">
+			<div class="row">
+				<div class="col-6">a</div>
+				<div class="col-6 bg-light vh-50 overflow-hidden">
+					<img src="public/circle-01.svg" alt="" / class="turn">
+				</div>
+			</div>
+		</div>
+		<div class="swiper-slide">
+			<div class="row">
+				<div class="col-6">c</div>
+				<div class="col-6">d</div>
+			</div>
+		</div>
+		<div class="swiper-slide">
+			<div class="row">
+				<div class="col-6">e</div>
+				<div class="col-6"></div>
+			</div>
+		</div>
+		...
+	</div>
+	<!-- If we need pagination -->
+	<div class="swiper-pagination"></div>
+
+	<!-- If we need navigation buttons -->
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+
+	<!-- If we need scrollbar -->
+	<div class="swiper-scrollbar"></div>
+</section>
+<style is:global>
+	.vh-50 {
+		height: 50vh;
+	}
+</style>
+<style>
+	.turn {
+		animation: turn 70s linear infinite;
+	}
+	@keyframes turn {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+</style>
